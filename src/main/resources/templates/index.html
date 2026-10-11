@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Consolidation des rapports d’activité</title>
+	<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
+	<script src="app.js" th:src="@{/app.js}" defer></script>
+</head>
+
+<body>
+	<main>
+		<div class="eyebrow">RAPPORTS D’ACTIVITÉ · CONSOLIDATION</div>
+		<h1>Consolidation des rapports d’activité</h1>
+		<p class="intro">Importez les rapports Word afin de générer un rapport consolidé par application.</p>
+		<div class="steps"><span>1. Importer les rapports</span><span>2. Regrouper par application</span><span>3.Télécharger le document</span></div>
+		<form id="upload-form" action="consolidate" th:action="@{/consolidate}" method="post" enctype="multipart/form-data">
+			<label class="dropzone" id="dropzone">
+				<span class="icon" aria-hidden="true">↑</span>
+				<strong>Déposer les fichiers Word</strong>
+				<span>ou cliquer pour sélectionner plusieurs fichiers</span>
+				<input id="files" type="file" name="files" multiple accept=".docx" aria-label="Sélectionner les rapports Word">
+			</label>
+			<p class="limits">Format .docx · 10 Mo par fichier · 100 Mo au total · jusqu’à 100 fichiers</p>
+			<div class="selection"><strong id="file-count">Aucun fichier sélectionné</strong><button type="button"id="clear" class="secondary">Tout retirer</button></div>
+			<ul id="file-list" aria-label="Fichiers sélectionnés"></ul>
+			<label for="submit" class="hint">Les applications identiques sont regroupées et les travaux en double supprimés.</label>
+			<button id="submit" type="submit" disabled>Consolider les rapports</button>
+			<p id="status" role="status" aria-live="polite"></p>
+			<p id="error" role="alert" hidden></p>
+			<a id="download" hidden>Télécharger à nouveau le rapport</a>
+		</form>
+		<p class="footer"> Périodes et avertissements inclus dans le rapport</p>
+	</main>
+</body>
+
+</html>

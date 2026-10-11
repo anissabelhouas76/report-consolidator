@@ -1,0 +1,208 @@
+:root {
+	font-family: Segoe UI, Arial, sans-serif;
+	color: #202939;
+	background: #f3f6fa
+}
+
+* {
+	box-sizing: border-box
+}
+
+body {
+	margin: 0;
+	padding: 48px 20px
+}
+
+main {
+	max-width: 850px;
+	margin: auto
+}
+
+.eyebrow {
+	color: #42628a;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1.8px
+}
+
+h1 {
+	font-size: 36px;
+	line-height: 1.2;
+	letter-spacing: -1px;
+	margin: 18px 0
+}
+
+.intro {
+	color: #58677b;
+	line-height: 1.7;
+	max-width: 700px
+}
+
+.steps {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin: 28px 0;
+	font-size: 13px;
+	color: #476386
+}
+
+form {
+	background: white;
+	border: 1px solid #dde5ee;
+	border-radius: 18px;
+	padding: 32px;
+	box-shadow: 0 10px 40px #17365d08
+}
+
+.dropzone {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	align-items: center;
+	padding: 30px;
+	border: 2px dashed #a6bdd8;
+	border-radius: 12px;
+	background: #f8fbff;
+	cursor: pointer;
+	text-align: center
+}
+
+.dropzone.drag,
+.dropzone:focus-within {
+	border-color: #225da6;
+	background: #edf5ff
+}
+
+.dropzone span {
+	font-size: 14px;
+	color: #62748a
+}
+
+.dropzone .icon {
+	font-size: 28px;
+	color: #225da6
+}
+
+.dropzone input {
+	max-width: 100%;
+	margin: 6px 0
+}
+
+.limits,
+.footer {
+	font-size: 12px;
+	color: #697b8f;
+	line-height: 1.6
+}
+
+.selection {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	margin-top: 24px;
+	font-size: 14px
+}
+
+ul {
+	padding: 0;
+	max-height: 250px;
+	overflow: auto;
+	list-style: none
+}
+
+li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 0;
+	border-bottom: 1px solid #edf0f4;
+	font-size: 14px
+}
+
+li span {
+	overflow-wrap: anywhere
+}
+
+button {
+	border: 0;
+	border-radius: 8px;
+	background: #225da6;
+	color: white;
+	padding: 14px 20px;
+	cursor: pointer;
+	font: 600 14px Segoe UI, Arial
+}
+
+button:disabled {
+	opacity: .5;
+	cursor: default
+}
+
+.secondary {
+	background: #edf3fa;
+	color: #32577f;
+	padding: 8px 12px
+}
+
+.hint {
+	display: block;
+	font-size: 13px;
+	color: #607086;
+	line-height: 1.6;
+	margin: 24px 0
+}
+
+#submit {
+	width: 100%
+}
+
+#status {
+	color: #237348;
+	font-size: 14px
+}
+
+#error {
+	background: #fff0f0;
+	color: #a52c2c;
+	padding: 12px;
+	border-radius: 8px;
+	overflow-wrap: anywhere
+}
+
+#download {
+	color: #225da6;
+	font-size: 14px
+}
+
+.footer {
+	text-align: center;
+	margin-top: 22px
+}
+
+a:focus,
+button:focus,
+input:focus {
+	outline: 3px solid #88b9f4;
+	outline-offset: 3px
+}
+
+@media(max-width:600px) {
+	body {
+		padding: 28px 14px
+	}
+
+	form {
+		padding: 20px
+	}
+
+	h1 {
+		font-size: 28px
+	}
+
+	.steps {
+		gap: 10px
+	}
+}
